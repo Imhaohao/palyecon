@@ -1,13 +1,25 @@
-# Palyecon
+# Paly Economics Club Website
 
-A modern economics platform built with React and TypeScript.
+The official website for Paly Economics Club - a student organization dedicated to cultivating interest in economics and finance among high school students.
 
-## Features
+## About the Club
 
-- Interactive economic data visualization
-- Real-time market analysis
-- Educational economics content
-- User-friendly interface
+The Economics Club aims to cultivate interest among students in economics and finance. Members compete in two prestigious competitions throughout the school year:
+- **Wharton Global High School Investment Competition** (Fall Semester)
+- **National Economics Challenge** (Spring Semester)
+
+Members also learn the fundamentals of finance, microeconomics, and macroeconomics through interactive workshops and expert guidance.
+
+## Website Features
+
+- **About Us** - Learn about our mission and activities
+- **Competition Information** - Details about Wharton and NEC competitions
+- **Calendar** - View upcoming meetings and events
+- **Instagram Integration** - Stay connected with our social media
+- **Educational Resources** - Access learning materials and tools
+- **Market Analysis** - Interactive economic data visualization
+- **Economic Calculator** - Financial calculation tools
+- **Sign Up** - Join our community
 
 ## Getting Started
 
@@ -40,7 +52,14 @@ npm run dev
 - TypeScript
 - Vite
 - Tailwind CSS
-- Chart.js (for data visualization)
+- Lucide React (icons)
+- Instagram Embed API
+
+## Contact
+
+- **Email**: palyeconomics@gmail.com
+- **Instagram**: [@palyecon](https://www.instagram.com/palyecon/)
+- **Meetings**: Tuesdays at 3:30 PM in Room 205
 
 ## Contributing
 
