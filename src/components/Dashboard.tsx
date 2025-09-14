@@ -127,9 +127,6 @@ const Dashboard = () => {
                     }`}>
                       {stat.change}
                     </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-                      from last month
-                    </span>
                   </div>
                 )}
               </div>
