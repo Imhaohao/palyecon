@@ -40,6 +40,40 @@ const Dashboard = () => {
 
   return (
     <div className="w-full space-y-6">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden rounded-lg shadow-lg">
+        <div className="relative h-96 bg-gradient-to-r from-paly-navy to-paly-primary">
+          <img 
+            src="/img3.png" 
+            alt="Paly Economics Club Hero" 
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <div className="relative z-10 flex items-center justify-center h-full px-6">
+            <div className="text-center text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+                Paly Economics Club
+              </h1>
+              <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto">
+                Cultivating economic interest and excellence among students through competitions, learning, and community engagement.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://forms.gle/zmsbaXqVwRTAJx3E8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-paly-gold hover:bg-paly-gold/90 text-paly-navy font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
+                >
+                  Join Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div>
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
           Club Dashboard
@@ -359,18 +393,14 @@ const Dashboard = () => {
         <p className="text-lg mb-6 opacity-90">
           Become part of Paly Economics Club and compete in prestigious competitions while learning from experts!
         </p>
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="flex justify-center">
           <a
-            href="#signup"
+            href="https://forms.gle/zmsbaXqVwRTAJx3E8"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-paly-gold hover:bg-yellow-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
           >
             Join Now
-          </a>
-          <a
-            href="#about"
-            className="border-2 border-white hover:bg-white hover:text-paly-navy text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
-          >
-            Learn More
           </a>
         </div>
       </div>
