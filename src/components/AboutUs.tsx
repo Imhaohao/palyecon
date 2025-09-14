@@ -61,7 +61,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img4.png" 
+              src="/img4.png" 
               alt="Club activities" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -76,7 +76,7 @@ const AboutUs = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img5.png" 
+              src="/img5.png" 
               alt="Study sessions" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -91,7 +91,7 @@ const AboutUs = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img6.png" 
+              src="/img6.png" 
               alt="Club events" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
