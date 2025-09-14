@@ -1,8 +1,11 @@
-import { TrendingUp, TrendingDown, DollarSign, Users, UserPlus, Calendar, Trophy, Instagram } from 'lucide-react'
+import { TrendingUp, TrendingDown, DollarSign, Users, UserPlus, Calendar, Trophy, Instagram, Plus, X } from 'lucide-react'
 import InstagramEmbed from './InstagramEmbed'
 import CalendarComponent from './Calendar'
+import { useState } from 'react'
 
 const Dashboard = () => {
+  const [showCalendarModal, setShowCalendarModal] = useState(false)
+
   const stats = [
     {
       title: 'Active Members',
@@ -250,11 +253,20 @@ const Dashboard = () => {
 
       {/* Calendar Section */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-        <div className="flex items-center mb-6">
-          <Calendar className="h-8 w-8 text-paly-primary mr-3" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Upcoming Events
-          </h3>
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center">
+            <Calendar className="h-8 w-8 text-paly-primary mr-3" />
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Upcoming Events
+            </h3>
+          </div>
+          <button
+            onClick={() => setShowCalendarModal(true)}
+            className="flex items-center bg-paly-primary hover:bg-paly-primary/90 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            Add to Calendar
+          </button>
         </div>
         <div className="mb-6">
           <iframe 
@@ -404,6 +416,133 @@ const Dashboard = () => {
           </a>
         </div>
       </div>
+
+      {/* Calendar Add Modal */}
+      {showCalendarModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                Add Paly Economics Club Calendar
+              </h3>
+              <button
+                onClick={() => setShowCalendarModal(false)}
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            
+            <div className="p-6 space-y-6">
+              <div className="text-center">
+                <Calendar className="h-16 w-16 text-paly-primary mx-auto mb-4" />
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Follow Our Events
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Add the Paly Economics Club calendar to your personal calendar to stay updated on all our events, meetings, and competitions.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <h5 className="font-semibold text-gray-900 dark:text-white mb-3">
+                  Calendar URL:
+                </h5>
+                <div className="flex items-center space-x-2">
+                  <code className="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-800 dark:text-gray-200 break-all">
+                    https://calendar.google.com/calendar/u/0?cid=cGFseWVjb25vbWljc0BnbWFpbC5jb20
+                  </code>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText('https://calendar.google.com/calendar/u/0?cid=cGFseWVjb25vbWljc0BnbWFpbC5jb20');
+                      // You could add a toast notification here
+                    }}
+                    className="bg-paly-primary hover:bg-paly-primary/90 text-white px-3 py-2 rounded text-sm transition-colors duration-200"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h5 className="font-semibold text-gray-900 dark:text-white">
+                  How to Add to Your Calendar:
+                </h5>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-paly-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      1
+                    </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        <strong>Google Calendar:</strong> Go to Google Calendar → Settings → Add calendar → From URL → Paste the URL above
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-paly-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      2
+                    </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        <strong>Outlook:</strong> Go to Calendar → Add calendar → Subscribe from web → Paste the URL above
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-paly-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      3
+                    </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        <strong>Apple Calendar:</strong> File → New Calendar Subscription → Paste the URL above
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-paly-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      4
+                    </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        <strong>Other Calendars:</strong> Look for "Subscribe to calendar" or "Add calendar from URL" option
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0">
+                    <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">i</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-blue-800 dark:text-blue-200 text-sm">
+                      <strong>Note:</strong> This calendar will automatically update with new events. You'll receive notifications for upcoming meetings and competitions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex justify-end p-6 border-t border-gray-200 dark:border-gray-700">
+              <button
+                onClick={() => setShowCalendarModal(false)}
+                className="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors duration-200"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
