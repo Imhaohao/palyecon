@@ -85,7 +85,7 @@ function AppContent() {
             {/* Logo and Title */}
             <div className="flex items-center">
               <img 
-                src="/src/images/econ.png" 
+                src="/econ.png" 
                 alt="Paly Economics Club Logo" 
                 className="h-8 w-8 sm:h-10 sm:w-10 mr-2 sm:mr-3 rounded-full object-cover"
                 onError={(e) => {
