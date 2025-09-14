@@ -54,6 +54,56 @@ const AboutUs = () => {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
           What We Do
         </h2>
+        
+        {/* Featured Images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="relative group overflow-hidden rounded-lg">
+            <img 
+              src="/src/images/img4.png" 
+              alt="Club activities" 
+              className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEgxNTBMMTAwIDE1MEw1MCAxMDBINTAiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+'
+              }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">
+                Club Activities
+              </span>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img 
+              src="/src/images/img5.png" 
+              alt="Study sessions" 
+              className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEgxNTBMMTAwIDE1MEw1MCAxMDBINTAiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+'
+              }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">
+                Study Sessions
+              </span>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img 
+              src="/src/images/img6.png" 
+              alt="Club events" 
+              className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEgxNTBMMTAwIDE1MEw1MCAxMDBINTAiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+'
+              }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">
+                Club Events
+              </span>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="text-center p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 rounded-lg">
             <Trophy className="h-12 w-12 text-paly-blue mx-auto mb-4" />
