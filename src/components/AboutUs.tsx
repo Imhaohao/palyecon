@@ -13,7 +13,9 @@ const AboutUs = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="#signup"
+              href="https://forms.gle/G4myTSEbCdzu1ZTf6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-paly-gold hover:bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Join Our Club
@@ -140,6 +142,113 @@ const AboutUs = () => {
         </div>
       </div>
 
+      {/* Leadership Team */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          Our Leadership Team
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Advisor */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/mr_dodd.png" 
+                alt="Corbin Dodd" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Corbin Dodd</h3>
+            <p className="text-paly-primary font-medium">Advisor</p>
+          </div>
+
+          {/* Co-president Jerry */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/jerry.png" 
+                alt="Jerry Yan" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                style={{ objectPosition: 'center 20%' }}
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Jerry Yan</h3>
+            <p className="text-paly-primary font-medium">Co-president</p>
+          </div>
+
+          {/* Co-president Brian */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/brian.png" 
+                alt="Brian Liu" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                style={{ objectPosition: 'center 20%' }}
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Brian Liu</h3>
+            <p className="text-paly-primary font-medium">Co-president</p>
+          </div>
+
+          {/* Vice President Cindy */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/cindy.png" 
+                alt="Cindy Liang" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Cindy Liang</h3>
+            <p className="text-paly-primary font-medium">Vice President</p>
+          </div>
+
+          {/* Competition Manager Allison */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/allison.png" 
+                alt="Allison Ma" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Allison Ma</h3>
+            <p className="text-paly-primary font-medium">Competition Manager</p>
+          </div>
+
+          {/* Secretary Kaiden */}
+          <div className="text-center">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <img 
+                src="/kaiden.png" 
+                alt="Kaiden Mu" 
+                className="w-full h-full rounded-full object-cover border-4 border-paly-primary"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDAiIHI9IjE2IiBmaWxsPSIjOUVBMzVCIi8+CjxwYXRoIGQ9Ik0zMiA4MEM0MCA5NiA2NCAxMDQgNjQgMTA0Uzg4IDk2IDk2IDgwVjEwOEgzMlY4MFoiIGZpbGw9IiM5RUEzNUIiLz4KPC9zdmc+'
+                }}
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Kaiden Mu</h3>
+            <p className="text-paly-primary font-medium">Secretary</p>
+          </div>
+        </div>
+      </div>
+
       {/* Competition Schedule */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8">
         <div className="flex items-center mb-6">
@@ -198,13 +307,15 @@ const AboutUs = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <a
-            href="#signup"
+            href="https://forms.gle/G4myTSEbCdzu1ZTf6"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white hover:bg-gray-100 text-paly-navy px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
           >
             Sign Up Now
           </a>
           <a
-            href="#contact"
+            href="mailto:palyeconomics@gmail.com"
             className="border-2 border-white hover:bg-white hover:text-paly-navy text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
           >
             Contact Us

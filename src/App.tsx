@@ -111,29 +111,41 @@ function AppContent() {
                 const Icon = tab.icon
                 return (
                   <div key={tab.id} className="relative">
-                    <button
-                      onClick={() => {
-                        if (tab.hasSubmenu) {
-                          setDropdownOpen(dropdownOpen === tab.id ? null : tab.id)
-                        } else {
-                          setActiveTab(tab.id)
-                          setDropdownOpen(null)
-                        }
-                      }}
-                      className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
-                        activeTab === tab.id || dropdownOpen === tab.id
-                          ? 'bg-paly-primary text-white'
-                          : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
-                      }`}
-                    >
-                      <Icon className="h-4 w-4 mr-2" />
-                      {tab.label}
-                      {tab.hasSubmenu && (
-                        <svg className="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      )}
-                    </button>
+                    {tab.id === 'signup' ? (
+                      <a
+                        href="https://forms.gle/G4myTSEbCdzu1ZTf6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        <Icon className="h-4 w-4 mr-2" />
+                        {tab.label}
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          if (tab.hasSubmenu) {
+                            setDropdownOpen(dropdownOpen === tab.id ? null : tab.id)
+                          } else {
+                            setActiveTab(tab.id)
+                            setDropdownOpen(null)
+                          }
+                        }}
+                        className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
+                          activeTab === tab.id || dropdownOpen === tab.id
+                            ? 'bg-paly-primary text-white'
+                            : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
+                        }`}
+                      >
+                        <Icon className="h-4 w-4 mr-2" />
+                        {tab.label}
+                        {tab.hasSubmenu && (
+                          <svg className="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        )}
+                      </button>
+                    )}
                     
                     {/* Dropdown Menu */}
                     {tab.hasSubmenu && dropdownOpen === tab.id && (
@@ -195,32 +207,47 @@ function AppContent() {
                   const Icon = tab.icon
                   return (
                     <div key={tab.id}>
-                      <button
-                        onClick={() => {
-                          if (tab.hasSubmenu) {
-                            setDropdownOpen(dropdownOpen === tab.id ? null : tab.id)
-                          } else {
-                            setActiveTab(tab.id)
-                            setMobileMenuOpen(false)
-                            setDropdownOpen(null)
-                          }
-                        }}
-                        className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                          activeTab === tab.id || dropdownOpen === tab.id
-                            ? 'bg-paly-primary text-white'
-                            : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
-                        }`}
-                      >
-                        <div className="flex items-center">
-                          <Icon className="h-4 w-4 mr-2" />
-                          {tab.label}
-                        </div>
-                        {tab.hasSubmenu && (
-                          <svg className={`h-3 w-3 transition-transform ${dropdownOpen === tab.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        )}
-                      </button>
+                      {tab.id === 'signup' ? (
+                        <a
+                          href="https://forms.gle/G4myTSEbCdzu1ZTf6"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="w-full flex items-center justify-between px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        >
+                          <div className="flex items-center">
+                            <Icon className="h-4 w-4 mr-2" />
+                            {tab.label}
+                          </div>
+                        </a>
+                      ) : (
+                        <button
+                          onClick={() => {
+                            if (tab.hasSubmenu) {
+                              setDropdownOpen(dropdownOpen === tab.id ? null : tab.id)
+                            } else {
+                              setActiveTab(tab.id)
+                              setMobileMenuOpen(false)
+                              setDropdownOpen(null)
+                            }
+                          }}
+                          className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                            activeTab === tab.id || dropdownOpen === tab.id
+                              ? 'bg-paly-primary text-white'
+                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
+                          }`}
+                        >
+                          <div className="flex items-center">
+                            <Icon className="h-4 w-4 mr-2" />
+                            {tab.label}
+                          </div>
+                          {tab.hasSubmenu && (
+                            <svg className={`h-3 w-3 transition-transform ${dropdownOpen === tab.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          )}
+                        </button>
+                      )}
                       
                       {/* Mobile Submenu */}
                       {tab.hasSubmenu && dropdownOpen === tab.id && (

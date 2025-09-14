@@ -9,7 +9,19 @@ const Footer = () => {
           {/* Club Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <Trophy className="h-8 w-8 text-paly-primary mr-2" />
+              <img 
+                src="/econ.png" 
+                alt="Paly Economics Club Logo" 
+                className="h-8 w-8 mr-2"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (nextElement) {
+                    nextElement.style.display = 'block';
+                  }
+                }}
+              />
+              <Trophy className="h-8 w-8 text-paly-primary mr-2" style={{ display: 'none' }} />
               <h3 className="text-xl font-bold">Paly Economics Club</h3>
             </div>
             <p className="text-gray-400 text-sm">
@@ -71,11 +83,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="h-4 w-4 mr-2" />
-                Room 205, Palo Alto High School
+                Room 809, Palo Alto High School
               </div>
               <div className="flex items-center text-gray-400">
                 <Calendar className="h-4 w-4 mr-2" />
-                Tuesdays at 3:30 PM
+                Wednesday Lunch
               </div>
             </div>
           </div>
@@ -97,18 +109,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex justify-center">
           <p className="text-gray-400 text-sm">
             © 2024 Paly Economics Club. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#privacy" className="text-gray-400 hover:text-paly-primary text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#terms" className="text-gray-400 hover:text-paly-primary text-sm transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
         </div>
       </div>
