@@ -11,6 +11,7 @@ import NationalEconomicsChallenge from './components/NationalEconomicsChallenge'
 import WhartonInvestmentCompetition from './components/WhartonInvestmentCompetition'
 import SignUp from './components/SignUp'
 import Footer from './components/Footer'
+import ComingSoon from './components/ComingSoon'
 import { ThemeProvider, useTheme } from './contexts/ThemeContext'
 
 function AppContent() {
@@ -64,11 +65,11 @@ function AppContent() {
       case 'nec':
         return <NationalEconomicsChallenge />
       case 'analysis':
-        return <MarketAnalysis />
+        return <ComingSoon />
       case 'calculator':
-        return <EconomicCalculator />
+        return <ComingSoon />
       case 'education':
-        return <EducationalContent />
+        return <ComingSoon />
       case 'signup':
         return <SignUp />
       default:
