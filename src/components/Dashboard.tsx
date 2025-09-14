@@ -9,27 +9,27 @@ const Dashboard = () => {
   const stats = [
     {
       title: 'Active Members',
-      value: '45',
-      change: '+12',
+      value: '50+',
+      change: 'Join the economists in Paly Econ',
       trend: 'up',
       icon: Users,
       color: 'text-paly-blue'
     },
     {
-      title: 'Competitions',
-      value: '2',
-      change: 'This Year',
-      trend: 'up',
-      icon: Trophy,
-      color: 'text-paly-green'
-    },
-    {
       title: 'Weekly Meetings',
-      value: 'Tuesdays',
-      change: '3:30 PM',
+      value: 'Wednesdays',
+      change: '12:20 PM Lunch at Room 809',
       trend: 'up',
       icon: Calendar,
       color: 'text-paly-gold'
+    },
+    {
+      title: 'Discord Community',
+      value: 'Join Us',
+      change: 'Join a community of like-minded peers',
+      trend: 'up',
+      icon: UserPlus,
+      color: 'text-paly-green'
     },
     {
       title: 'Join Today',
@@ -45,7 +45,7 @@ const Dashboard = () => {
     <div className="w-full space-y-6">
       {/* Hero Section */}
       <div className="relative overflow-hidden rounded-lg shadow-lg">
-        <div className="relative h-96 bg-gradient-to-r from-paly-navy to-paly-primary">
+        <div className="relative min-h-screen bg-gradient-to-r from-paly-navy to-paly-primary">
           <img 
             src="/img3.png" 
             alt="Paly Economics Club Hero" 
@@ -54,7 +54,7 @@ const Dashboard = () => {
               e.currentTarget.style.display = 'none';
             }}
           />
-          <div className="relative z-10 flex items-center justify-center h-full px-6">
+          <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
             <div className="text-center text-white">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
                 Paly Economics Club
@@ -79,7 +79,7 @@ const Dashboard = () => {
 
       <div>
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Club Dashboard
+          About the Club
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
           Welcome to Paly Economics Club - Your gateway to economic excellence
@@ -90,10 +90,12 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, index) => {
           const Icon = stat.icon
+          const isDiscord = stat.title === 'Discord Community'
+          
           return (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-200"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -106,15 +108,28 @@ const Dashboard = () => {
                 </div>
                 <Icon className={`h-8 w-8 ${stat.color}`} />
               </div>
-              <div className="mt-4 flex items-center">
-                <span className={`text-sm font-medium ${
-                  stat.trend === 'up' ? 'text-green-600' : 'text-red-600'
-                }`}>
-                  {stat.change}
-                </span>
-                <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-                  from last month
-                </span>
+              <div className="mt-4">
+                {isDiscord ? (
+                  <a
+                    href="https://discord.gg/5qFzjvZZsE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-paly-green hover:bg-paly-green/90 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+                  >
+                    {stat.change}
+                  </a>
+                ) : (
+                  <div className="flex items-center">
+                    <span className={`text-sm font-medium ${
+                      stat.trend === 'up' ? 'text-green-600' : 'text-red-600'
+                    }`}>
+                      {stat.change}
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
+                      from last month
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           )
