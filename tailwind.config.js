@@ -44,6 +44,7 @@ export default {
           900: '#731f83',
         },
         paly: {
+          primary: 'rgb(37, 150, 190)',
           navy: '#1e3a8a',
           blue: '#3b82f6',
           lightBlue: '#60a5fa',
