@@ -1,4 +1,4 @@
-import { Users, UserPlus, Calendar, Plus, X } from 'lucide-react'
+import { Users, UserPlus, Calendar, Plus, X, Instagram } from 'lucide-react'
 import { useState } from 'react'
 
 const Dashboard = () => {
