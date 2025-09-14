@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { UserPlus, Mail, Phone, Users, Calendar, CheckCircle } from 'lucide-react'
+import { UserPlus, Mail, Users, Calendar, CheckCircle, Trophy } from 'lucide-react'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({

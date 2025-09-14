@@ -1,4 +1,4 @@
-import { Mail, Instagram, Calendar, MapPin, Users, Trophy } from 'lucide-react'
+import { Mail, Instagram, Calendar, MapPin, Trophy } from 'lucide-react'
 
 const Footer = () => {
   return (

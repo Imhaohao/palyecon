@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
-import { TrendingUp, BarChart3, Calculator, BookOpen, Users, Calendar, Instagram, Trophy, Target, Sun, Moon, Menu, X } from 'lucide-react'
+import { TrendingUp, BarChart3, Calculator, BookOpen, Users, Trophy, Target, Sun, Moon, Menu, X } from 'lucide-react'
 import Dashboard from './components/Dashboard'
-import MarketAnalysis from './components/MarketAnalysis'
-import EconomicCalculator from './components/EconomicCalculator'
-import EducationalContent from './components/EducationalContent'
 import AboutUs from './components/AboutUs'
-import InstagramEmbed from './components/InstagramEmbed'
-import CalendarComponent from './components/Calendar'
 import NationalEconomicsChallenge from './components/NationalEconomicsChallenge'
 import WhartonInvestmentCompetition from './components/WhartonInvestmentCompetition'
 import SignUp from './components/SignUp'
@@ -17,7 +12,7 @@ import { ThemeProvider, useTheme } from './contexts/ThemeContext'
 function AppContent() {
   const [activeTab, setActiveTab] = useState('dashboard')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null)
   const { theme, toggleTheme } = useTheme()
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -92,7 +87,10 @@ function AppContent() {
                 onError={(e) => {
                   // Fallback to icon if image fails to load
                   e.currentTarget.style.display = 'none'
-                  e.currentTarget.nextElementSibling.style.display = 'block'
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                  if (nextElement) {
+                    nextElement.style.display = 'block'
+                  }
                 }}
               />
               <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-paly-primary hidden" />
@@ -260,10 +258,8 @@ function AppContent() {
       </header>
 
       {/* Main Content */}
-      <main className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-        <div className="max-w-7xl mx-auto">
-          {renderContent()}
-        </div>
+      <main className="w-full">
+        {renderContent()}
       </main>
 
       {/* Footer */}

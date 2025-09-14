@@ -1,6 +1,4 @@
-import { TrendingUp, TrendingDown, DollarSign, Users, UserPlus, Calendar, Trophy, Instagram, Plus, X } from 'lucide-react'
-import InstagramEmbed from './InstagramEmbed'
-import CalendarComponent from './Calendar'
+import { Users, UserPlus, Calendar, Plus, X } from 'lucide-react'
 import { useState } from 'react'
 
 const Dashboard = () => {
@@ -42,9 +40,9 @@ const Dashboard = () => {
   ]
 
   return (
-    <div className="w-full space-y-6">
+    <div className="w-full">
       {/* Hero Section */}
-      <div className="relative overflow-hidden rounded-lg shadow-lg">
+      <div className="relative overflow-hidden w-full">
         <div className="relative min-h-screen bg-gradient-to-r from-paly-navy to-paly-primary">
           <img 
             src="/img3.png" 
@@ -76,6 +74,9 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
+      {/* Content Section */}
+      <div className="space-y-6 px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
 
       <div>
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -318,9 +319,7 @@ const Dashboard = () => {
               maxWidth: '540px', 
               minWidth: '326px', 
               padding: '0', 
-              width: '99.375%', 
-              width: '-webkit-calc(100% - 2px)', 
-              width: 'calc(100% - 2px)'
+              width: '99.375%'
             }}
           >
             <div style={{ padding: '16px' }}>
@@ -558,6 +557,7 @@ const Dashboard = () => {
           </div>
         </div>
       )}
+      </div>
     </div>
   )
 }
