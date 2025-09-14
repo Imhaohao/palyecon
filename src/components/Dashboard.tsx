@@ -50,7 +50,7 @@ const Dashboard = () => {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, index) => {
           const Icon = stat.icon
           return (
@@ -89,7 +89,7 @@ const Dashboard = () => {
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Club Photos
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative group overflow-hidden rounded-lg">
             <img 
               src="/src/images/img1.png" 
@@ -314,16 +314,16 @@ const Dashboard = () => {
         <p className="text-lg mb-6 opacity-90">
           Become part of Paly Economics Club and compete in prestigious competitions while learning from experts!
         </p>
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
             href="#signup"
-            className="bg-paly-gold hover:bg-yellow-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            className="bg-paly-gold hover:bg-yellow-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
           >
             Join Now
           </a>
           <a
             href="#about"
-            className="border-2 border-white hover:bg-white hover:text-paly-navy text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            className="border-2 border-white hover:bg-white hover:text-paly-navy text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
           >
             Learn More
           </a>
