@@ -143,7 +143,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img1.png" 
+              src="/img1.png" 
               alt="Adam Smith Team at the NEC" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -158,7 +158,7 @@ const Dashboard = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img2.png" 
+              src="/img2.png" 
               alt="David Ricardo Team at NEC" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -188,7 +188,7 @@ const Dashboard = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img4.png" 
+              src="/img4.png" 
               alt="Club Lecture" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -203,7 +203,7 @@ const Dashboard = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img5.png" 
+              src="/img5.png" 
               alt="Club Study Session" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -218,7 +218,7 @@ const Dashboard = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/src/images/img6.png" 
+              src="/img6.png" 
               alt="Our founding members" 
               className="w-full h-48 object-cover transition-transform group-hover:scale-105"
               onError={(e) => {
